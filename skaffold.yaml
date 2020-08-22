@@ -18,8 +18,6 @@ deploy:
 
 profiles:
   - name: gke
-    activation:
-      - kubeContext: gke1
     build:
       googleCloudBuild:
         projectId: vino9-276317

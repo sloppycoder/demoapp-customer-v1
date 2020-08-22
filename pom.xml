@@ -93,9 +93,6 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <defaultGoal>clean test</defaultGoal>
-    </build>
     <profiles>
         <profile>
             <id>boot</id>

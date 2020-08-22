@@ -10,7 +10,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.RUN_PROJECT }}
-  SERVICE_NAME: customer-v1
+  SERVICE_NAME: ext-cust-svc
   TAG: ${{ github.sha }}
 
 
@@ -33,6 +33,4 @@ jobs:
       # Build and push image to Google Container Registry
       - name: Invoke Cloud Build
         run: |-
-          echo TAG=$TAG
-          gcloud builds submit \
-            --tag "gcr.io/$PROJECT_ID/demoapp/$SERVICE_NAME:$TAG"
+          gcloud builds submit --substitutions=TAG_NAME="$TAG"
