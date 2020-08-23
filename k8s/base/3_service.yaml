@@ -22,7 +22,7 @@ spec:
           image: gcr.io/vino9-276317/demoapp/customer-v1
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8090
+            - containerPort: 9000
               protocol: TCP
           env:
             - name: EXTERNAL_CUSTOMER_URL
@@ -50,4 +50,4 @@ spec:
     app: customer
   ports:
     - name: http
-      port: 8090
+      port: 9000

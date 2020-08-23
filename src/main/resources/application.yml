@@ -13,7 +13,7 @@ spring:
         enabled: ${TRACE_WITH_STACKDRIVER:false}
 
 server:
-  port: 8090
+  port: 9000
 
 external:
   customer:
